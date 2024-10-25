@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+//import { ref } from 'vue';
+//import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue';
+import { Disclosure,  DisclosurePanel } from '@headlessui/vue';
 import ThemeToggle from './ThemeToggle.vue';
 
 /*
@@ -12,14 +13,16 @@ const navigation = [
 ];
 */
 
-const navigation = [];
+const navigation = [
+  { name: 'Home', href: '#' },
+];
 </script>
 
 <template>
   <Disclosure
     as="nav"
     class="bg-white dark:bg-gray-900 shadow-md sticky top-0 z-50 transition-colors duration-300"
-    v-slot="{ open }"
+    
   >
     <div class="container">
       <div class="relative flex h-16 items-center justify-between">
